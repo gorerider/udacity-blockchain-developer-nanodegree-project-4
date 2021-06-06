@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <main class="container">
+        <!-- Dynamic status -->
+        <div id="display-wrapper" class="top-20"></div>
+
+        <hr/>
+
+        <h2>Insure Flights</h2>
+        <div class="row top-20" id="flights-for-insurance">
+            <label class="form">Flight</label>
+            <select id="flightNumberInsurance">
+                <option value="LH0001">LH0001</option>
+                <option value="LH0002">LH0002</option>
+                <option value="LH0003">LH0003</option>
+            </select>
+            <input id="insuranceValue" type="number" min="0.1" max="1" step="0.1" value="0.1">
+            <button class="btn btn-primary" id="buyInsurance">Buy Insurance</button>
+            <br />
+            <br />
+        </div>
+
+        <hr/>
+        <h2>Credit Balance</h2>
+        <div class="row top-20">
+            <label class="form">LH0001</label>
+            <input id="creditBalanceLH0001" type="number" value="0" readonly> ETH
+        </div>
+
+        <div class="row top-20">
+            <label class="form">LH0002</label>
+            <input id="creditBalanceLH0002" type="number" value="0" readonly> ETH
+        </div>
+
+        <div class="row top-20">
+            <label class="form">LH0003</label>
+            <input id="creditBalanceLH0003" type="number" value="0" readonly> ETH
+        </div>
+
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="checkCreditBalance">Check All Balances</btn>
+            <btn class="btn btn-primary" id="withdrawCreditBalance" style="margin-left: 7px">Withdraw All Credits</btn>
+        </div>
+
+        <hr/>
+
+        <h2>Call Oracles</h2>
+        <div class="row top-20">
+            <label class="form">Flight</label>
+            <select id="flight-number">
+                <option value="LH0001">LH0001</option>
+                <option value="LH0002">LH0002</option>
+                <option value="LH0003">LH0003</option>
+            </select>
+            <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+        </div>
+    </main>
+
+</body>
+
+</html>
